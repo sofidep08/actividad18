@@ -1,15 +1,11 @@
 import tkinter as tk
-class BaseDatos:
-    categoria={}
-    bandas={}
-
 
 class ConcursoBandasApp:
     def __init__(self):
         self.ventana = tk.Tk()
         self.ventana.title("Concurso de Bandas - Quetzaltenango")
-        self.ventana.geometry("700x500")
-        self.ventana.configure(bg="light blue")
+        self.ventana.geometry("500x300")
+
         self.menu()
 
         tk.Label(
@@ -33,22 +29,9 @@ class ConcursoBandasApp:
         barra.add_cascade(label="Opciones", menu=opciones)
         self.ventana.config(menu=barra)
 
-    def __int__(self,id_banda,nombre,institucion,categoria):
-        self.id_banda = id_banda
-        self.nombre = nombre
-        self.institucion = institucion
-        self.categoria = categoria
-
-
     def inscribir_banda(self):
         print("Se abrió la ventana: Inscribir Banda")
         tk.Toplevel(self.ventana).title("Inscribir Banda")
-
-
-
-
-
-
 
     def registrar_evaluacion(self):
         print("Se abrió la ventana: Registrar Evaluación")
